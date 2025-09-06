@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeSpeedCalculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'JetBrains Mono', monospace;
+      background-color: #0f111a;
+      color: #e6e6e6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    .download-btn {
+      display: inline-block;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background: #00c853;
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .download-btn:hover {
+      background: #009624;
+    }
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    main section {
+      margin-bottom: 3rem;
+    }
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00c853;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      border-top: 1px solid #333;
+    }
+    /* Toggle button */
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 48px;
+      height: 48px;
+      background: none;
+      border: 2px solid #666;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(90deg, #FFD700 50%, #1E90FF 50%);
+      border-radius: 50%;
+    }
+    .light-mode {
+      background-color: #ffffff;
+      color: #0f111a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TimeSpeedCalculator</h1>
+    <p>Calculating time, just for you :)</p>
+    <a class="download-btn" href="https://github.com/Soul-Open/TimeSpeedCalculator/releases/download/v0.1.4-alpha/calculatoroftime.exe">Download</a>
+    <button class="toggle-btn" onclick="toggleMode()">
+      <div class="icon"></div>
+    </button>
+  </header>
+  
+  <main>
+    <section>
+      <h2>The Equation</h2>
+      <p>
+        <code>Time = UniverseSpeed × MassOfUniverse × State + c / Void</code><br>
+        <code>State = (ObjectMass ÷ ∞) + 1</code>
+      </p>
+    </section>
+
+    <section>
+      <h2>Principles</h2>
+      <p>
+        Based on the ideas of time dilation, mass and gravity affect how time flows. In vacuum, time runs at its fastest form (1 s^s) or 1...e+55 billion s^s. Near extreme gravity, such as black holes, time slows down and may even reach a forbidden <strong>NULL state</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Values</h2>
+      <ul>
+        <li>Universe scaling factor: 3.09 × 10¹⁸ × 700</li>
+        <li>Mass of Universe: ~1.5 × 10⁵³ kg</li>
+        <li>Speed of light (c): 299,792,458 m/s</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Open-Source forever.
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+</html>
